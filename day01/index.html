@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杨启飞写的学院官网</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: #1de84d;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+        }
+
+        .header__left {
+            font-size: 17px;
+            color: white;
+        }
+
+        .header__right {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .header__link {
+            color: white;
+            font-size: 12px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .header__link:hover {
+            color: #333;
+        }
+
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 60px;
+            background: white;
+        }
+
+        .logo {
+            max-width: 400px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-item {
+            font-family: '黑体';
+            font-weight: bold;
+        }
+
+        .nav__link {
+            color: rgb(0, 0, 0);
+            font-size: 15px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav__link:hover {
+            color: #00ffae;
+        }
+
+        .slider-container {
+            overflow: hidden;
+            background: #f0f0f0;
+            padding: 20px 0;
+        }
+
+        .slider {
+            display: flex;
+            gap: 10px;
+            animation: scroll 10s linear infinite;
+        }
+
+        .slider img {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 10px;
+                height: auto;
+                padding: 10px;
+            }
+
+            .main-header {
+                flex-direction: column;
+                gap: 20px;
+                padding: 15px;
+            }
+
+            .nav-menu {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+        }
+
+        .tail {
+            background-color: #004a06;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 200px;
+        }
+
+        .tail-left {
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .tail-right {
+            color: white;
+            padding: 10px;
+        }
+        .nav-menu2 {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+        .nav-item2 {
+            font-family: '黑体';
+            font-weight: bold;
+        }
+        .tail__link {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .tail__link:hover {
+            color: #afff2e;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="header__left">
+            国家示范性高职院校、全国优质专科高等职业院校、全国文明单位、全国职业教育先进单位
+        </div>
+        <nav class="header__right">
+            <a href="#" class="header__link">返回主页</a>
+            <a href="#" class="header__link">访客</a>
+            <a href="#" class="header__link">主页</a>
+            <a href="#" class="header__link">主页</a>
+            <a href="#" class="header__link">手机版</a>
+            <img src="icon1_05.png" alt="功能图标" style="width: 24px; height: 24px;">
+        </nav>
+    </header>
+
+    <!-- 主导航栏 -->
+    <header class="main-header">
+        <img src="logo_03.png" alt="学院logo" class="logo">
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav__link">学校概况</a></li>
+                <li class="nav-item"><a href="#" class="nav__link">二级部门</a></li>
+                <li class="nav-item"><a href="#" class="nav__link">教育教学</a></li>
+                <li class="nav-item"><a href="#" class="nav__link">科技服务</a></li>
+                <li class="nav-item"><a href="#" class="nav__link">就业招生</a></li>
+                <li class="nav-item"><a href="#" class="nav__link">清廉交院</a></li>
+                <li class="nav-item"><a href="#" class="nav__link">服务大厅</a></li>
+                <li class="nav-item"><a href="#" class="nav__link">信息公开</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 图片轮播 -->
+    <div class="slider-container">
+        <div class="slider">
+            <img src="Photo_6553637_DJI_37_jpg_5686051_0_2022616194128_.jpg" alt="校园风景">
+            <img src="DSC_2847.jpg" alt="校园活动">
+            <img src="0I6A9780.jpg" alt="教学设施">
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="tail">
+        <div class="tail-left">
+            <span>
+                招生咨询电话：028-82680050  82690045  82690046<br>
+                地址：四川省成都市温江区柳台大道东段208号<br>
+                邮编：611130<br>
+                电话：028-82680064(办公)<br>
+                版权所有：四川交通职业技术学院 蜀ICP备13005849号<br>
+            </span>
+        </div>
+        <div class="tail-right">
+            <p>
+            <span>
+                <img src="icon13_03.png" alt="功能图标" style="width: 50px; height: 50px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="icon13_05.png" alt="功能图标" style="width: 50px; height: 50px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="icon13_07.png" alt="功能图标" style="width: 50px; height: 50px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="icon13_09.png" alt="功能图标" style="width: 50px; height: 50px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="icon13_11.png" alt="功能图标" style="width: 50px; height: 50px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            </p>
+            <span>
+                <ul class="nav-menu2">
+                    <li class="nav-item2"><a href="#" class="tail__link">学校概况</a></li>
+                    <li class="nav-item2"><a href="#" class="tail__link">二级部门</a></li>
+                    <li class="nav-item2"><a href="#" class="tail__link">教育教学</a></li>
+                    <li class="nav-item2"><a href="#" class="tail__link">科技服务</a></li>
+                </ul>
+                <ul class="nav-menu2">
+                    <li class="nav-item2"><a href="#" class="tail__link">就业招生</a></li>
+                    <li class="nav-item2"><a href="#" class="tail__link">清廉交院</a></li>
+                    <li class="nav-item2"><a href="#" class="tail__link">服务大厅</a></li>
+                </ul>
+            </span>
+        </div>
+    </div>
+</body>
+</html>
